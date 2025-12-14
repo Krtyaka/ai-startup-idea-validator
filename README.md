@@ -1,9 +1,15 @@
 # AI Startup Idea Validator
 
-![React](https://img.shields.io/badge/React-18-blue?logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=node.js)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen?logo=mongodb)
-![OpenAI](https://img.shields.io/badge/AI-OpenAI-black?logo=openai)
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React-blue?logo=react&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Style-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-43853D?logo=node.js&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Framework-Express.js-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/AI-OpenAI-000000?logo=openai&logoColor=white&style=for-the-badge" />
+</p>
+
+---
 
 An AI-powered full-stack web application that helps founders quickly validate startup ideas by generating a structured analysis covering the problem, target customer, market, competitors, risks, and profitability.
 
@@ -13,8 +19,10 @@ This project was built as part of a full-stack + AI technical assignment to demo
 
 ## Live Demo
 
-- **Frontend (Vercel):** _To be added_
-- **Backend (Render):** _To be added_
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend%20(Vercel)-Coming%20Soon-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Backend%20(Render)-Coming%20Soon-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+</p>
 
 ---
 
@@ -33,28 +41,26 @@ This project was built as part of a full-stack + AI technical assignment to demo
 - Detailed idea analysis page
 - Delete ideas
 - Export idea analysis as a PDF
+- Loading and error states for improved user experience
 
 ---
 
 ## Tech Stack
 
-### Frontend
-
+**Frontend**
 - React (Vite)
 - Tailwind CSS
 - React Router
 - React Hot Toast
 - Lucide React Icons
 
-### Backend
-
+**Backend**
 - Node.js
 - Express.js
-- MongoDB with Mongoose
+- MongoDB (Mongoose)
 - OpenAI API
 
-### Other
-
+**Other**
 - Client-side PDF export using `html2pdf.js`
 
 ---
@@ -63,7 +69,7 @@ This project was built as part of a full-stack + AI technical assignment to demo
 
 The project is structured as two separate applications:
 
-- **Client** – A React frontend responsible for user interaction, form handling, dashboards, and PDF export.
+- **Client** – A React frontend responsible for user interaction, dashboards, and PDF export.
 - **Server** – An Express backend that handles API requests, integrates with the OpenAI API, and persists data to MongoDB.
 
 ### High-level Flow
@@ -82,13 +88,12 @@ The project is structured as two separate applications:
 PDF export is implemented on the client side using `html2pdf.js`.
 
 To ensure a clean, readable document:
-
 - A temporary **PDF mode** is applied during export
 - Dark UI styles are replaced with print-friendly styles
 - Interactive UI elements are hidden
 - The layout is optimized for readability
 
-For a production system, a server-side PDF solution could be considered, but a client-side approach was chosen here to keep the MVP lightweight and simple.
+For a production system, a server-side PDF solution could be considered, but a client-side approach was chosen to keep the MVP lightweight and simple.
 
 ---
 
@@ -122,7 +127,6 @@ AI-Startup-Idea-Validator/
 ## Running Locally
 
 ### Prerequisites
-
 - Node.js (v18+ recommended)
 - MongoDB (local or cloud)
 - OpenAI API key
@@ -158,16 +162,16 @@ npm install
 npm run dev
 ```
 
-The frontend will run on `http://localhost:5173` by default.
+The frontend will run on `http://localhost:5173`.
 
 ---
 
 ## Design Decisions & Trade-offs
 
-- React + Express were chosen for familiarity and fast iteration
+- React and Express were chosen for familiarity and fast iteration
 - MongoDB was used for flexible schema design
-- Client-side PDF export was selected to avoid backend complexity for an MVP
-- Contextual navigation was preferred over a global navbar to keep the UI focused
+- Client-side PDF export avoids backend complexity for an MVP
+- Contextual navigation was preferred over a global navbar
 - The UI prioritizes clarity and usability over heavy visual effects
 
 ---
@@ -178,10 +182,10 @@ The frontend will run on `http://localhost:5173` by default.
 - Idea comparison and scoring history
 - Improved AI prompting with stricter schemas
 - Server-side PDF generation
-- Analytics and insights across multiple ideas
+- Analytics across multiple ideas
 
 ---
 
 ## Author
 
-Built by **Krtyaka**
+Built by **Your Name**
