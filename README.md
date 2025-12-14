@@ -94,34 +94,6 @@ To ensure a clean, readable document:
 - The layout is optimized for readability
 
 For a production system, a server-side PDF solution could be considered, but a client-side approach was chosen to keep the MVP lightweight and simple.
-
----
-
-## Project Structure
-
-```
-AI-Startup-Idea-Validator/
-├── client/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── styles/
-│   │   └── main.jsx
-│   ├── package.json
-│   └── vite.config.js
-├── server/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   └── index.js
-│   ├── package.json
-│   └── .env
-└── README.md
-```
-
 ---
 
 ## Running Locally
@@ -188,4 +160,4 @@ The frontend will run on `http://localhost:5173`.
 
 ## Author
 
-Built by **Your Name**
+Built with ❤️ by [**Krtyaka**](https://github.com/Krtyaka)
