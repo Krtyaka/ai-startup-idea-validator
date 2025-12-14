@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PDF MODE STYLES */
+
+.pdf-mode {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+.pdf-mode * {
+  background: transparent !important;
+  color: #111111 !important;
+  border-color: #dddddd !important;
+  box-shadow: none !important;
+}
+
+.pdf-mode button {
+  display: none !important;
+}
+
+/* Improve spacing for print */
+.pdf-mode h1,
+.pdf-mode h2,
+.pdf-mode h3 {
+  color: #000000 !important;
+}
+
+.pdf-mode p {
+  line-height: 1.6 !important;
+}
+
+/* Prevent awkward page breaks */
+.pdf-mode .no-break {
+  page-break-inside: avoid;
+}
