@@ -21,10 +21,11 @@ This project was built as part of a full-stack + AI technical assignment to demo
 
 <p align="center">
   <a href="https://ai-startup-idea-validator-2595.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/Frontend%20Live%20(Vercel)-Open-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend%20Live%20(Vercel)-Live Link-000000?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
+  <br>
   <a href="https://ai-startup-idea-validator.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/Backend%20API%20(Render)-Open-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+    <img src="https://img.shields.io/badge/Backend%20API%20(Render)-Live Link-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
   </a>
 </p>
 
@@ -96,8 +97,9 @@ To ensure a clean, readable document:
 - Dark UI styles are replaced with print-friendly styles
 - Interactive UI elements are hidden
 - The layout is optimized for readability
-
+  
 For a production system, a server-side PDF solution could be considered, but a client-side approach was chosen to keep the MVP lightweight and simple.
+
 ---
 
 ## Running Locally
@@ -149,6 +151,60 @@ The frontend will run on `http://localhost:5173`.
 - Client-side PDF export avoids backend complexity for an MVP
 - Contextual navigation was preferred over a global navbar
 - The UI prioritizes clarity and usability over heavy visual effects
+
+---
+
+## AI Prompting Approach
+
+The application uses the OpenAI API to generate a structured validation report for each startup idea.
+
+The prompt is intentionally designed to:
+- Enforce a consistent and predictable response structure
+- Avoid free-form or unstructured text
+- Produce data that can be reliably stored in the database and rendered in the UI
+
+---
+
+### Prompt Strategy
+
+The AI is instructed to act as a **startup analyst** and analyze a given idea based on common early-stage validation criteria.
+
+The response is constrained to a JSON format with the following fields:
+
+- `problem`
+- `customer`
+- `market`
+- `competitor` (array of objects with `name` and `differentiation`)
+- `tech_stack` (array)
+- `risk_level` (Low / Medium / High)
+- `profitability_score` (0–100)
+- `justification`
+
+Requesting a strict JSON-only response simplifies parsing, validation, and persistence on the backend.
+
+---
+
+### Example Prompt 
+
+```
+You are an expert startup consultant.
+
+Analyze the following startup idea and return a structured JSON object with these fields:
+problem, customer, market, competitor, tech_stack, risk_level, profitability_score, justification.
+
+Rules:
+- Keep responses concise and realistic
+- competitor must include exactly 3 competitors with one-line differentiation
+- tech_stack must include 4–6 practical MVP technologies
+- profitability_score must be an integer between 0 and 100
+- Return ONLY valid JSON. Do not include explanations, markdown, or extra text.
+
+Startup Idea:
+Title: ${title}
+Description: ${description}
+```
+
+This structured prompting approach ensures predictable AI output while remaining flexible enough to evolve with more advanced validation logic in the future.
 
 ---
 
