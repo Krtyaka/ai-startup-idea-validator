@@ -20,8 +20,12 @@ This project was built as part of a full-stack + AI technical assignment to demo
 ## Live Demo
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Frontend%20(Vercel)-Coming%20Soon-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Backend%20(Render)-Coming%20Soon-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+  <a href="https://ai-startup-idea-validator-2595.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Frontend%20Live%20(Vercel)-Open-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  <a href="https://ai-startup-idea-validator.onrender.com" target="_blank">
+    <img src="https://img.shields.io/badge/Backend%20API%20(Render)-Open-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+  </a>
 </p>
 
 ---
