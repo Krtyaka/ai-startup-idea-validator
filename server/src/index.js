@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import ideaRoutes from "./routes/ideaRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -11,7 +12,14 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://your-frontend-name.vercel.app", // add later
+    ],
+  })
+);
 app.use(express.json());
 
 app.use("/ideas", ideaRoutes);
