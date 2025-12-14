@@ -1,5 +1,10 @@
 # AI Startup Idea Validator
 
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen?logo=mongodb)
+![OpenAI](https://img.shields.io/badge/AI-OpenAI-black?logo=openai)
+
 An AI-powered full-stack web application that helps founders quickly validate startup ideas by generating a structured analysis covering the problem, target customer, market, competitors, risks, and profitability.
 
 This project was built as part of a full-stack + AI technical assignment to demonstrate practical development skills, system design thinking, and real-world AI integration.
