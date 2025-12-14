@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import ideaRoutes from "./routes/ideaRoutes.js";
-import cors from "cors";
 
 dotenv.config();
 
