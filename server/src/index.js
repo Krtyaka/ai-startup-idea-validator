@@ -15,7 +15,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://your-frontend-name.vercel.app", // add later
+      "https://ai-startup-idea-validator-2595.vercel.app/",
     ],
   })
 );
