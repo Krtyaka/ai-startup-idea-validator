@@ -15,7 +15,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://ai-startup-idea-validator-2595.vercel.app/",
+      "https://ai-startup-idea-validator-2595.vercel.app",
     ],
   })
 );
