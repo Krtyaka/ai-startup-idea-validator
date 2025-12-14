@@ -23,7 +23,7 @@ This project was built as part of a full-stack + AI technical assignment to demo
   <a href="https://ai-startup-idea-validator-2595.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/Frontend%20Live%20(Vercel)-Live Link-000000?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
-  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://ai-startup-idea-validator.onrender.com" target="_blank">
     <img src="https://img.shields.io/badge/Backend%20API%20(Render)-Live Link-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
   </a>
