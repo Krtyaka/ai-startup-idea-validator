@@ -17,7 +17,7 @@ This project was built as part of a full-stack + AI technical assignment to demo
 
 ---
 
-## Live Demo
+## Live Demo & API
 
 <p align="center">
   <a href="https://ai-startup-idea-validator-2595.vercel.app" target="_blank">
