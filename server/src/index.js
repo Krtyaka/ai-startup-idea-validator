@@ -21,7 +21,7 @@ app.use(
 );
 app.use(express.json());
 
-app.use("/ideas", ideaRoutes);
+app.use("/api/ideas", ideaRoutes);
 
 app.get("/", (req, res) => {
   res.send("AI Startup Idea Validator API is running");

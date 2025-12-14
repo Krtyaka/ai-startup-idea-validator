@@ -53,6 +53,7 @@ This project was built as part of a full-stack + AI technical assignment to demo
 ## Tech Stack
 
 **Frontend**
+
 - React (Vite)
 - Tailwind CSS
 - React Router
@@ -60,12 +61,14 @@ This project was built as part of a full-stack + AI technical assignment to demo
 - Lucide React Icons
 
 **Backend**
+
 - Node.js
 - Express.js
 - MongoDB (Mongoose)
 - OpenAI API
 
 **Other**
+
 - Client-side PDF export using `html2pdf.js`
 
 ---
@@ -93,11 +96,12 @@ The project is structured as two separate applications:
 PDF export is implemented on the client side using `html2pdf.js`.
 
 To ensure a clean, readable document:
+
 - A temporary **PDF mode** is applied during export
 - Dark UI styles are replaced with print-friendly styles
 - Interactive UI elements are hidden
 - The layout is optimized for readability
-  
+
 For a production system, a server-side PDF solution could be considered, but a client-side approach was chosen to keep the MVP lightweight and simple.
 
 ---
@@ -105,6 +109,7 @@ For a production system, a server-side PDF solution could be considered, but a c
 ## Running Locally
 
 ### Prerequisites
+
 - Node.js (v18+ recommended)
 - MongoDB (local or cloud)
 - OpenAI API key
@@ -159,6 +164,7 @@ The frontend will run on `http://localhost:5173`.
 The application uses the OpenAI API to generate a structured validation report for each startup idea.
 
 The prompt is intentionally designed to:
+
 - Enforce a consistent and predictable response structure
 - Avoid free-form or unstructured text
 - Produce data that can be reliably stored in the database and rendered in the UI
@@ -184,7 +190,7 @@ Requesting a strict JSON-only response simplifies parsing, validation, and persi
 
 ---
 
-### Example Prompt 
+### Example Prompt
 
 ```
 You are an expert startup consultant.
@@ -192,11 +198,32 @@ You are an expert startup consultant.
 Analyze the following startup idea and return a structured JSON object with these fields:
 problem, customer, market, competitor, tech_stack, risk_level, profitability_score, justification.
 
+Scoring guidelines for profitability_score:
+- 80–90: Clear problem, large market, strong differentiation
+- 60–75: Reasonable idea, competitive or execution risk
+- 40–55: Vague idea, crowded market, or unclear monetization
+- Below 40: Very unclear value or weak business case
+
+Tech Stack Guidelines:
+- Web SaaS → React + Node.js is acceptable
+- Mobile-first products → React Native or Flutter
+- AI-heavy products → Python, ML frameworks
+- Enterprise/internal tools → focus on scalability and search
+- Choose technologies based on the idea, not defaults
+
+Risk Level Guidelines:
+- If the idea is vague, crowded, or lacks clear monetization, risk_level should be High.
+- If the idea depends on a two-sided marketplace or hardware, risk_level should be High.
+- If the idea has a clear paying customer and strong ROI, risk_level can be Low or Medium.
+- Market should be Growing only if there is clear demand; otherwise use Competitive or Saturated.
+
 Rules:
 - Keep responses concise and realistic
 - competitor must include exactly 3 competitors with one-line differentiation
 - tech_stack must include 4–6 practical MVP technologies
 - profitability_score must be an integer between 0 and 100
+- Do NOT overhype
+- Do NOT reuse the same tech stack unless appropriate
 - Return ONLY valid JSON. Do not include explanations, markdown, or extra text.
 
 Startup Idea:
