@@ -27,6 +27,8 @@ app.get("/", (req, res) => {
   res.send("AI Startup Idea Validator API is running");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
 });
